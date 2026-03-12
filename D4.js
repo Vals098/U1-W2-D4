@@ -103,11 +103,13 @@ console.log("EXERCISE 6b:", check3and7(35)) //verified
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const reverseString = function (toBeReversed) {
-  let reversed = ""  //variabile dentro la funzione si "svuota" ogni volta che la chiamo. Imposto la variabile come contenitore di stringhe vuoto.
+  let reversed = "" //variabile dentro la funzione si "svuota" ogni volta che la chiamo. Imposto la variabile come contenitore di stringhe vuoto.
 
-  for (let i = toBeReversed.length - 1; i >= 0; i--)
-    //parto dall'i=7-1=6, ovvero dalla fine. Mi fermo a i=0. Vado a ritroso.
-    {
+  for (
+    let i = toBeReversed.length - 1;
+    i >= 0;
+    i-- //parto dall'i=7-1=6, ovvero dalla fine. Mi fermo a i=0. Vado a ritroso.
+  ) {
     reversed = reversed + toBeReversed[i]
   }
 
@@ -122,12 +124,16 @@ console.log(reverseString("EPICODE")) // ricordati di chiamare la funzione
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const upperFirst = function(phrase){
-    let words = phrase.split(" ")
-   for (let i=0; i<words.length; i++)
-    words[0].toUpperCase() + words.slice(1)
-   
+const upperFirst = function (phrase) {
+  let words = phrase.split(" ")
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i]
+    words[i] = word[0].toUpperCase() + word.slice(1)
+  }
+  return words.join(" ")
 }
+
+console.log(upperFirst("ho tanto sonno"))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
