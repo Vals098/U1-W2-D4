@@ -3,6 +3,12 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const area = function (l1, l2) {
+  const multiply = l1 * l2
+  return multiply
+}
+
+console.log("EXERCISE 1:", area(3, 10)) //verified
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -11,6 +17,16 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const crazySum = function (n1, n2) {
+  if (n1 === n2) {
+    return (n1 + n2) * 3
+  } else {
+    return n1 + n2
+  }
+}
+
+console.log("EXERCISE 2a:", crazySum(3, 6)) //verified
+console.log("EXERCISE 2b:", crazySum(9, 9)) //verified
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -18,6 +34,16 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const crazyDiff = function (num) {
+  if (num > 19) {
+    return Math.abs(num - 19) * 3
+  } else {
+    return Math.abs(num - 19)
+  }
+}
+
+console.log("EXERCISE 3a:", crazyDiff(10)) //verified
+console.log("EXERCISE 3b:", crazyDiff(25)) //verified
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -25,6 +51,16 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const boundary = function (n) {
+  if ((20 < n && n <= 100) || n === 400) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log("EXERCISE 4a:", boundary(105)) //verified
+console.log("EXERCISE 4b:", boundary(30)) //verified
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -33,6 +69,16 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const epify = function (stringa){
+    if (stringa.startsWith('EPICODE')) {
+        return stringa
+    } else {return 'EPICODE' + stringa}
+}
+
+console.log('EXERCISE 5a:',epify(' School'))//verified
+console.log('EXERCISE 5b:',epify('EPICODE School'))//verified
+
+
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
