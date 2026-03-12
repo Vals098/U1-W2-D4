@@ -104,19 +104,15 @@ console.log("EXERCISE 6b:", check3and7(35)) //verified
 /* SCRIVI QUI LA TUA RISPOSTA */
 const reverseString = function (toBeReversed) {
   let reversed = "" //variabile dentro la funzione si "svuota" ogni volta che la chiamo. Imposto la variabile come contenitore di stringhe vuoto.
-
-  for (
-    let i = toBeReversed.length - 1;
-    i >= 0;
-    i-- //parto dall'i=7-1=6, ovvero dalla fine. Mi fermo a i=0. Vado a ritroso.
-  ) {
+  //parto dall'i=7-1=6, ovvero dalla fine. Mi fermo a i=0. Vado a ritroso.
+  for (let i = toBeReversed.length - 1; i >= 0; i--) {
     reversed = reversed + toBeReversed[i]
   }
 
   return reversed
 }
 
-console.log(reverseString("EPICODE")) // ricordati di chiamare la funzione
+console.log("EXERCISE 7:", reverseString("EPICODE")) // ricordati di chiamare la funzione
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -133,7 +129,7 @@ const upperFirst = function (phrase) {
   return words.join(" ")
 }
 
-console.log(upperFirst("ho tanto sonno"))
+console.log("EXERCISE 8:", upperFirst("ho tanto sonno"))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -141,9 +137,24 @@ console.log(upperFirst("ho tanto sonno"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const cutString = function (str) {
+  return str.slice(1, -1)
+}
+
+console.log("EXERCISE 8:", cutString("Valeria"))
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (number) {
+  let casual = []
+  for (let i = 0; i < number; i++) {
+    const lancio = Math.floor(Math.random() * 11)
+    casual.push(lancio)
+  }
+  return casual
+}
+
+console.log(giveMeRandom(8))//verified
