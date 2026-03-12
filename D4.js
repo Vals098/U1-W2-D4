@@ -69,16 +69,16 @@ console.log("EXERCISE 4b:", boundary(30)) //verified
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const epify = function (stringa){
-    if (stringa.startsWith('EPICODE')) {
-        return stringa
-    } else {return 'EPICODE' + stringa}
+const epify = function (stringa) {
+  if (stringa.startsWith("EPICODE")) {
+    return stringa
+  } else {
+    return "EPICODE" + stringa
+  }
 }
 
-console.log('EXERCISE 5a:',epify(' School'))//verified
-console.log('EXERCISE 5b:',epify('EPICODE School'))//verified
-
-
+console.log("EXERCISE 5a:", epify(" School")) //verified
+console.log("EXERCISE 5b:", epify("EPICODE School")) //verified
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -86,12 +86,35 @@ console.log('EXERCISE 5b:',epify('EPICODE School'))//verified
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const check3and7 = function (pos) {
+  if (pos % 3 === 0 || pos % 7 === 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log("EXERCISE 6a:", check3and7(100)) //verified
+console.log("EXERCISE 6b:", check3and7(35)) //verified
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const reverseString = function (toBeReversed) {
+  let reversed = ""  //variabile dentro la funzione si "svuota" ogni volta che la chiamo. Imposto la variabile come contenitore di stringhe vuoto.
+
+  for (let i = toBeReversed.length - 1; i >= 0; i--)
+    //parto dall'i=7-1=6, ovvero dalla fine. Mi fermo a i=0. Vado a ritroso.
+    {
+    reversed = reversed + toBeReversed[i]
+  }
+
+  return reversed
+}
+
+console.log(reverseString("EPICODE")) // ricordati di chiamare la funzione
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -99,6 +122,12 @@ console.log('EXERCISE 5b:',epify('EPICODE School'))//verified
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirst = function(phrase){
+    let words = phrase.split(" ")
+   for (let i=0; i<words.length; i++)
+    words[0].toUpperCase() + words.slice(1)
+   
+}
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
